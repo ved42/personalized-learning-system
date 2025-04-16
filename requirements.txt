@@ -2,3 +2,4 @@ dotenv
 langchain 
 langchain_groq
 streamlit
+pyyaml

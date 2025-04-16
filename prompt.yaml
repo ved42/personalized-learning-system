@@ -1,0 +1,32 @@
+profile_prompt: |
+  A student wants to learn AI. Here's their message:
+
+  "{user_input}"
+
+  Extract the following fields in JSON:
+  - goal
+  - background (math, coding, ai_knowledge)
+  - learning_style
+  - time_per_week
+  Return only the JSON.
+
+plan_prompt: |
+  You are an expert AI tutor. A student wants to learn Artificial Intelligence. Here's their profile:
+
+  {profile}
+
+  Generate a 4-week personalized learning plan in **valid JSON only**, in this format:
+
+  {{
+    "learning_plan": [
+      {{
+        "week": 1,
+        "topics": ["Topic 1", "Topic 2"],
+        "resources": ["Resource 1", "Resource 2"],
+        "project": "Mini project idea here"
+      }},
+      ...
+    ]
+  }}
+
+  ✅ Return ONLY the JSON. Do not include explanations or notes.
